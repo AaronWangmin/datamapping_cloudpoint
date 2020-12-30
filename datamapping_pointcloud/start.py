@@ -3,8 +3,6 @@ import prepare
 
 # project_dir = "/media/slam/SHCJ01/20201219135816_WM_SHANGHAI_AFA1119"
 
-# prepare.preprare(project_dir)
-
 
 def arg_parser():
     parser = argparse.ArgumentParser(description='Project las to image')

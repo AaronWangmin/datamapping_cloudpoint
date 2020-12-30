@@ -61,7 +61,8 @@ def create_11_pointcloud_dir(project_dir, lidar_name):
 
     outputDir = project_dir + "/11_POINTCLOUD/" + lidar_name + "_POINTCLOUD"
     if os.path.exists(outputDir):
-        os.removedirs(outputDir)
+        shutil.rmtree(outputDir, ignore_errors=True)
+        # os.removedirs(outputDir)
 
     # os.mkdir(project_dir + "/11_POINTCLOUD/" + lidar_name)
     os.mkdir(outputDir)
@@ -97,8 +98,8 @@ def createProcNavFile(project_dir):
     ProcNavFile = project_dir + "/06_INS_PROC/" + get_project_name(
         project_dir) + "_Proc.nav"
 
-    if os.path.exists(ProcNavFile):
-        os.remove(ProcNavFile)
+    # if os.path.exists(ProcNavFile):
+    #     os.remove(ProcNavFile)
 
     # cloudParaFile = open(ProcNavFile, "w+")
     # cloudParaFile.writelines("1tesdfsdst....test")
